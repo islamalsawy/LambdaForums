@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lambdaForums.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +12,7 @@ namespace lambdaForums.data.Models
         public string Description { get; set; }
         public DateTime created { get; set; }
         public string ImageUrl { get; set; }
-        public virtual IEnumerable<Posts> Posts { get; set; }
+        public virtual IEnumerable<Post> Posts { get; set; }
 
 
     }
