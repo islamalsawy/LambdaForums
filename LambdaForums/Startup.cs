@@ -1,6 +1,8 @@
-﻿using LambdaForums.Data;
+﻿using lambdaForums.data;
+using LambdaForums.Data;
 using LambdaForums.Data.Models;
 using LambdaForums.Services;
+using lamdbaForums.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -31,7 +33,7 @@ namespace LambdaForums
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
+            services.AddScoped<IForum, ForumService>();
             services.AddMvc();
         }
 
